@@ -18,6 +18,9 @@
     gnutar
     zstd
 
+    # adding font for terminal
+    nerd-fonts.jetbrains-mono
+
     # compilers
     gcc
 
