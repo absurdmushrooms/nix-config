@@ -18,6 +18,9 @@
     gnutar
     zstd
 
+    # media players
+    haruna
+
     # adding font for terminal
     nerd-fonts.jetbrains-mono
 
