@@ -1,4 +1,8 @@
 { config, pkgs, ...}: {
+
+  # enabling obs studio
+  programs.obs-studio.enable = true;
+
   home.packages = with pkgs; [
     # social media
     telegram-desktop
