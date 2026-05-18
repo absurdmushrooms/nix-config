@@ -8,7 +8,12 @@
     telegram-desktop
     discord-ptb
 
-    # KDE
+    # graphical/video editors
+    krita
+    inkscape
+    kdePackages.kdenlive
+
+    # KDE utils
     kdePackages.kcalc
     kdePackages.partitionmanager
   ];
