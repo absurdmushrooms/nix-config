@@ -13,6 +13,11 @@
     inkscape
     kdePackages.kdenlive
 
+    # gaming utils
+    mangohud
+    goverlay
+    protonup-qt
+
     # KDE utils
     kdePackages.kcalc
     kdePackages.partitionmanager

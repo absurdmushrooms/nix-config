@@ -119,6 +119,10 @@
     };
   };
 
+  # enabling gamescope and gamemode
+  programs.steam.gamescopeSession.enable = true;
+  programs.gamemode.enable = true;
+
   # enabling flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
