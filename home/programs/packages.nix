@@ -18,6 +18,9 @@
     goverlay
     protonup-qt
 
+    # game launchers
+    prismlauncher
+
     # KDE utils
     kdePackages.kcalc
     kdePackages.partitionmanager
