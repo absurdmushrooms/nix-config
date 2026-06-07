@@ -128,6 +128,7 @@
 
   # system packages
   environment.systemPackages = with pkgs; [
+     gnumake
      vim
      wget
      brightnessctl
