@@ -135,6 +135,7 @@
      howdy
      git
      parallel
+     harfbuzz
    ];
 
   # setting vim as default text editor
