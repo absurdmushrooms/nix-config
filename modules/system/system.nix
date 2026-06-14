@@ -119,6 +119,9 @@
     };
   };
 
+  # enabling nix-ld
+  programs.nix-ld.enable = true;
+
   # enabling gamescope and gamemode
   programs.steam.gamescopeSession.enable = true;
   programs.gamemode.enable = true;
@@ -136,6 +139,7 @@
      git
      parallel
      harfbuzz
+     jdk21
    ];
 
   # setting vim as default text editor
