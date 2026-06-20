@@ -140,6 +140,7 @@
      parallel
      harfbuzz
      jdk21
+     ffmpeg-full
    ];
 
   # setting vim as default text editor
