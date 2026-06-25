@@ -26,7 +26,8 @@
     ZSH_AUTOSUGGEST_STRATEGY=(completion)
     '';
     shellAliases = {
-      update = "sudo nix-channel --update && home-manager switch && sudo nixos-rebuild switch";
+      update = "sudo nixos-rebuild switch";
+      upgrade = "cd ./etc/nixos/ && sudo nix-channel --update && nix flake update && sudo nixos-rebuild switch";
     };
   };
 }
