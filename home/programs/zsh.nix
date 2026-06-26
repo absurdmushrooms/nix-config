@@ -27,7 +27,7 @@
     '';
     shellAliases = {
       update = "sudo nixos-rebuild switch";
-      upgrade = "cd ./etc/nixos/ && sudo nix-channel --update && nix flake update && sudo nixos-rebuild switch";
+      upgrade = "cd /etc/nixos/ && sudo nix-channel --update && nix flake update && sudo nixos-rebuild switch";
     };
   };
 }
