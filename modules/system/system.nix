@@ -74,7 +74,7 @@
   services.printing.enable = true;
 
   # enabling sound
-  services.pulseaudio.enable = false; # Disable PulseAudio
+  services.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
@@ -105,6 +105,12 @@
   nixpkgs.config.permittedInsecurePackages = [
     "openssl-1.1.1w"
   ];
+
+  # enabling fwupd
+  services.fwupd.enable = true;
+
+  # enabling partition manager
+  programs.partition-manager.enable = true;
   
   # enabling firefox
   programs.firefox.enable = true;

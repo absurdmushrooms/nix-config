@@ -23,8 +23,7 @@
 
     # KDE utils
     kdePackages.kcalc
-    kdePackages.partitionmanager
-  ];
+    ];
 }
 
 # kate: space-indent on; indent-width 2;
