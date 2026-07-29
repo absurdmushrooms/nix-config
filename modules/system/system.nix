@@ -112,8 +112,11 @@
   # enabling partition manager
   programs.partition-manager.enable = true;
   
-  # enabling firefox
-  programs.firefox.enable = true;
+  # enabling firefox nightly
+  programs.firefox = {
+    enable = true;
+    package = inputs.firefox-nightly.packages.${pkgs.stdenv.hostPlatform.system}.firefox-nightly-bin;
+  };
 
   # enabling steam and fixing issue with cursor inside it
   programs.steam = {
