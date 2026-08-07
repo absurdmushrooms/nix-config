@@ -3,8 +3,12 @@
 
   programs.git = {
     enable = true;
-    userName = "Oleksii";
-    userEmail = "redmel.alt@gmail.com";
+    settings = {
+      user = {
+        name = "Oleksii";
+        email = "redmel.alt@gmail.com";
+      };
+    };
   };
 }
 
