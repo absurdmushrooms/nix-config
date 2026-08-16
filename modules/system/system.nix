@@ -20,6 +20,17 @@
     limine.secureBoot.enable = true;
   };
 
+  # enabling garbage collecting
+  nix = {
+    gc = {
+      automatic = true;
+      dates = "weekly";
+      options = "--delete-older-than 30d";
+    };
+    # deduplicate store files
+    settings.auto-optimise-store = true;
+  };
+
   services.power-profiles-daemon = {
     enable = true;
   };
