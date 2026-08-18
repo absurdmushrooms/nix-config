@@ -5,7 +5,7 @@ This repository contains nix code that builds my system.
 
 |                                                                | NixOS (Wayland)                                                                                                      |
 | -------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| Desktop environment                                        | KDE                                                                                                                 |
+| Desktop environment                                        | KDE Plasma                                                                                                          |
 | Terminal Emulator                                          | Konsole                                                                                                             |
 | Display Manager                                            | SDDM                                                                                                                |
 | Theme                                                      | Breeze Dark                                                                                                         |
