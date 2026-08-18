@@ -3,7 +3,7 @@ This repository contains nix code that builds my system.
 
 ## Components
 
-|                                                                | NixOS(Wayland)                                                                                                      |
+|                                                                | NixOS (Wayland)                                                                                                      |
 | -------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
 | Desktop environment                                        | KDE                                                                                                                 |
 | Terminal Emulator                                          | Konsole                                                                                                             |
@@ -24,7 +24,7 @@ This repository contains nix code that builds my system.
 
 ## Screenshots
 
-![desktop](./_img/screnshot-1.webp)
+![desktop](./_img/screenshot-1.webp)
 
 ![fastfetch](./_img/screenshot-2.webp)
 
