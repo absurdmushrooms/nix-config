@@ -1,9 +1,13 @@
-{ config, pkgs, ...}: {
+{ config, pkgs, ...}:
 
+{
   # enabling obs studio
   programs.obs-studio.enable = true;
 
   home.packages = with pkgs; [
+    # compilers
+    gcc
+
     # social media
     telegram-desktop
     discord-ptb
@@ -12,6 +16,9 @@
     krita
     inkscape
     kdePackages.kdenlive
+
+    # musical player
+    haruna
 
     # gaming utils
     mangohud

@@ -1,16 +1,23 @@
-{ config, pkgs, ... }:
+{ config, pkgs, myvars, ... }:
 
 {
-  home.username = "absurd";
-  home.homeDirectory = "/home/absurd";
+  home.username = myvars.username;
+  home.homeDirectory = "/home/${myvars.username}";
 
-  # Packages that should be installed to the user profile.
   imports = [
-    ./programs/common.nix
-    ./programs/git.nix
-    ./programs/zsh.nix
-    ./programs/packages.nix
+    ./base/core.nix
+    ./base/git.nix
+    ./base/eza.nix
+    ./base/tealdeer.nix
+    ./base/starship.nix
+    ./base/zsh.nix
+    ./${myvars.hostname}/packages.nix
   ];
+
+  home.shellAliases = {
+      update = "sudo nixos-rebuild switch";
+      upgrade = "cd /etc/nixos/ && sudo nix-channel --update && nix flake update && sudo nixos-rebuild switch";
+  };
 
   # This value determines the home Manager release that your
   # configuration is compatible with. This helps avoid breakage

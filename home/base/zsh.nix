@@ -1,19 +1,10 @@
-{ config, pkgs, ...}: {
+{ config, pkgs, ...}:
 
-  programs.starship = {
-    enable = true;
-    settings = {
-      add_newline = false;
-      character = {
-        success_symbol = "[➜](bold green)";
-        error_symbol = "[✗](bold red)";
-      };
-    };
-  };
-
+{
   programs.zsh = {
     enable = true;
     history.size = 10000;
+
     zplug = {
       enable = true;
       plugins = [
@@ -22,13 +13,10 @@
         { name = "zsh-users/zsh-history-substring-search"; tags = [ as:plugin ]; }
       ];
     };
+
     initContent = ''
     ZSH_AUTOSUGGEST_STRATEGY=(completion)
     '';
-    shellAliases = {
-      update = "sudo nixos-rebuild switch";
-      upgrade = "cd /etc/nixos/ && sudo nix-channel --update && nix flake update && sudo nixos-rebuild switch";
-    };
   };
 }
 
