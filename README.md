@@ -1,4 +1,4 @@
-## absurdmushrooms' Nix Configuration :snowflake:
+## absurdmushrooms' NixOS Configuration :snowflake:
 This repository contains nix code that builds my system.
 
 ## Components
