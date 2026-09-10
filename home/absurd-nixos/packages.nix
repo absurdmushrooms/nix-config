@@ -1,12 +1,17 @@
-{ config, pkgs, ...}:
+{ pkgs, ...}:
 
 {
+  imports = [
+    ./vscodium.nix
+  ];
+
   # enabling obs studio
   programs.obs-studio.enable = true;
 
   home.packages = with pkgs; [
     # compilers
     gcc
+    dotnetCorePackages.sdk_10_0
 
     # social media
     telegram-desktop
