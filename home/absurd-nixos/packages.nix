@@ -34,7 +34,7 @@
     prismlauncher
 
     # KDE utils
-    kdePackages.kcalc
+    kdePackages.kalk
     ];
 }
 
