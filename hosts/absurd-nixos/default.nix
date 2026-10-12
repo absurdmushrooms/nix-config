@@ -1,7 +1,7 @@
 {
   imports = [
   ./../../modules/howdy.nix
-  ./audio.nix
+  ./peripherals.nix
   ];
 }
 
