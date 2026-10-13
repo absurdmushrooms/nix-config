@@ -35,6 +35,13 @@
 
     # KDE utils
     kdePackages.kalk
+    #kclock with kclockd fix
+    (kdePackages.kclock.overrideAttrs (oldAttrs: {
+      qtWrapperArgs = (oldAttrs.qtWrapperArgs or []) ++ [
+        "--prefix LD_LIBRARY_PATH : ${lib.makeLibraryPath [ pipewire ]}"
+      ];
+    }))
+
     ];
 }
 
