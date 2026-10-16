@@ -41,7 +41,7 @@
         "--prefix LD_LIBRARY_PATH : ${lib.makeLibraryPath [ pipewire ]}"
       ];
     }))
-    # desktop sharing
+    # desktop sharing / virtual displays
     kdePackages.krfb
 
     ];

@@ -13,6 +13,14 @@
   # disable wifi power saving
   networking.networkmanager.wifi.powersave = false;
 
+  # ===== display streaming =====
+  # sunshine support
+  services.sunshine = {
+    enable = true;
+    capSysAdmin = true;
+    openFirewall = true;
+  };
+
 }
 
 # kate: space-indent on; indent-width 2;
