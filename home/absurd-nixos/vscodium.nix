@@ -28,12 +28,38 @@ let
       postInstall = (oldAttrs.postInstall or "") + ''
         jq '.engines.vscode = "^1.126.0"' $out/share/vscode/extensions/mathematic.vscode-pdf/package.json > tmp.json && mv tmp.json $out/share/vscode/extensions/mathematic.vscode-pdf/package.json
       '';
+      });
+
+    # vscode-avalonia
+    vscode-avalonia = (pkgs.vscode-utils.buildVscodeMarketplaceExtension {
+      mktplcRef = {
+        name = "vscode-avalonia";
+        publisher = "AvaloniaTeam";
+        version = "12.4.3";
+        hash = "sha256-JjcqeIsni8Slj25D8mw4SduZrjHRvkGhoo/sycgvfEU=";
+      };
+    # fix errors with proprietary ms-dotnet dependencies
+    }).overrideAttrs (oldAttrs: {
+      nativeBuildInputs = (oldAttrs.nativeBuildInputs or []) ++ [ pkgs.jq ];
+      postInstall = (oldAttrs.postInstall or "") + ''
+        jq '.extensionDependencies -= ["ms-dotnettools.csdevkit"]' $out/share/vscode/extensions/AvaloniaTeam.vscode-avalonia/package.json > tmp.json && mv tmp.json $out/share/vscode/extensions/AvaloniaTeam.vscode-avalonia/package.json
+      '';
     });
+
 in {
   # main config
   programs.vscodium = {
     enable = true;
-    package = pkgs.vscodium.fhs;
+    package = pkgs.vscodium.fhsWithPackages (ps: with ps; [
+      # dependencies that needed for avalonia to work
+      fontconfig
+      freetype
+      libGL
+      libx11
+      libice
+      libsm
+      stdenv.cc.cc.lib
+    ]);
 
     profiles.default = {
       userSettings = {
@@ -50,6 +76,8 @@ in {
       extensions = [
         # dotrush enabled via script
         vscode-pdf
+        vscode-avalonia
+        pkgs.vscode-extensions.ms-dotnettools.vscode-dotnet-runtime
       ];
     };
   };
