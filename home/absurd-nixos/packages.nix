@@ -22,8 +22,9 @@
     inkscape
     kdePackages.kdenlive
 
-    # musical player
+    # music software
     haruna
+    spotifast
 
     # gaming utils
     mangohud
@@ -43,6 +44,9 @@
     }))
     # desktop sharing / virtual displays
     kdePackages.krfb
+
+    # software for nothing headphones on linux
+    (pkgs.callPackage ./eara.nix {})
 
     ];
 }
