@@ -24,7 +24,7 @@
 
     # music software
     haruna
-    spotifast
+    spotify
 
     # gaming utils
     mangohud
@@ -46,7 +46,7 @@
     kdePackages.krfb
 
     # software for nothing headphones on linux
-    (pkgs.callPackage ./eara.nix {})
+    (pkgs.callPackage ./something-x.nix {})
 
     ];
 }
