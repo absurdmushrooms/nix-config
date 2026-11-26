@@ -15,7 +15,8 @@
 
     # social media
     telegram-desktop
-    discord-ptb
+#     discord-ptb // waiting for fix
+    discord # temporary
 
     # graphical/video editors
     krita
@@ -35,6 +36,7 @@
     prismlauncher
 
     # KDE utils
+    kdePackages.dolphin-plugins
     kdePackages.kalk
     #kclock with kclockd fix
     (kdePackages.kclock.overrideAttrs (oldAttrs: {
